@@ -1,0 +1,74 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+
+    <style type="text/css">
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin: 0px;
+            padding: 0px;
+
+            background-color: aliceblue;
+        }
+        form {
+            width: 90%;
+            min-width: 250px;
+            max-width: 350px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            font-size: 18px;
+
+            padding: 10px;
+            margin-bottom: 5px;
+
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        .placeholder {
+            flex: 1;
+        }
+    </style>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(){
+            let button = document.querySelector("input[type=submit]");
+            button.style.backgroundColor = "yellow";
+
+            // button.addEventListener("click", async function(event){
+            //     event.preventDefault();
+
+            //     let email = document.querySelector("input[name=email]").value
+            //     let password = document.querySelector("input[name=password]").value
+            //     console.log(email, password)
+
+            //     let response = await fetch("/login", {
+            //         method: "POST",
+            //         body: new FormData(document.querySelector('form'))
+            //     })
+            //     let response_json = await response.json()
+            //     console.log(response_json)
+
+            // })
+        })
+    </script>
+ 
+
+</head>
+<body>
+    <div class="placeholder"></div>
+    <form method="POST" action="/login">
+        <input type="text" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="Login">
+    </form>
+    <div class="placeholder"></div>
+</body>
+</html>
